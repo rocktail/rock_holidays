@@ -34,7 +34,7 @@ namespace RockHolidays.Model.Models
         /// <summary>
         /// Gets or sets employee who handed the request
         /// </summary>
-        public Employee Employee { get; set; }
+        public virtual Employee Employee { get; set; }
 
         /// <summary>
         /// Gets or sets identity of employee who handed the request
@@ -44,7 +44,7 @@ namespace RockHolidays.Model.Models
         /// <summary>
         /// Gets or sets cover for our employee during holiday period
         /// </summary>
-        public Employee Cover { get; set; }
+        public virtual Employee Cover { get; set; }
 
         /// <summary>
         /// Gets or sets identityt of the cover for our employee during holiday period
