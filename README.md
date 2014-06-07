@@ -31,6 +31,6 @@ It takes care of all the hassle and allows both employees and company to stop wo
 	- Manage calendars
 
   
-#### Licensing
+### Licensing
 
 Software is released under the GNU General Public License, version 3 (GPLv3) (http://www.gnu.org/copyleft/gpl.html).
