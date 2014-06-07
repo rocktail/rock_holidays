@@ -36,6 +36,14 @@ namespace RockHolidays.Model.Models
         /// </summary>
         public int DepartmentId { get; set; }
 
+        /// <summary>
+        /// Gets or sets name of organizational role the employee has assigned
+        /// </summary>
+        public string Stanowisko { get; set; }
 
+        /// <summary>
+        /// Gets or sets amount of hours employee spends working daily
+        /// </summary>
+        public decimal NormaCzasuPracy { get; set; }
     }
 }
