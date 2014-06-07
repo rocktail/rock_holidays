@@ -60,5 +60,15 @@ namespace RockHolidays.Model.Models
         /// Gets or sets holiday request number
         /// </summary>
         public string HolidayRequestNumber { get; set; }
+
+        /// <summary>
+        /// Type of holiday request
+        /// </summary>
+        public virtual HolidayRequestType HolidayRequestType { get; set; }
+
+        /// <summary>
+        /// Identity of holiday request type
+        /// </summary>
+        public int HolidayRequestTypeId { get; set; }
     }
 }
