@@ -26,7 +26,15 @@ namespace RockHolidays.Model.Models
         /// </summary>
         public string Surname { get; set; }
 
+        /// <summary>
+        /// Gets or sets department the employee is assigned to
+        /// </summary>
+        public virtual Department Department { get; set; }
 
+        /// <summary>
+        /// Gets or sets identity of department the employee is assigned to
+        /// </summary>
+        public int DepartmentId { get; set; }
 
 
     }
