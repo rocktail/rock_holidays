@@ -12,8 +12,18 @@ namespace RockHolidays.Model.Models
     public class Department
     {
         /// <summary>
-        /// Department unique identity
+        /// Gets or sets department unique identity
         /// </summary>
         public int DepartmentId { get; set; }
+
+        /// <summary>
+        /// Gets or sets department name
+        /// </summary>
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or sets enitity created date
+        /// </summary>
+        public DateTime CreatedDate { get; set; }
     }
 }
