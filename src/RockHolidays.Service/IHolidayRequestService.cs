@@ -8,6 +8,8 @@ namespace RockHolidays.Service
     /// </summary>
     public interface IHolidayRequestService
     {
-        IEnumerable<HolidayRequest> CreateHolidayRequest(HolidayRequest holidayRequest);
+        HolidayRequest CreateHolidayRequest(HolidayRequest holidayRequest);
+
+        void SaveHolidayRequest();
     }
 }
