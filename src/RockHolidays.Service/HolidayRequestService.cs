@@ -14,11 +14,15 @@ namespace RockHolidays.Service
     {
         private IHolidayRequestRepository _holidayRequestRepository;
         private IUnitOfWork _unitOfWork;
+        private IHolidayRequestJournalEntryRepository _holidayRequestJournalEntryRepository;
 
-        public HolidayRequestService(IHolidayRequestRepository holidayRequestRepository, IUnitOfWork unitOfWork)
+        public HolidayRequestService(IHolidayRequestRepository holidayRequestRepository
+                                   , IUnitOfWork unitOfWork
+                                   , IHolidayRequestJournalEntryRepository holidayRequestJournalEntryRepository)
         {
             this._holidayRequestRepository = holidayRequestRepository;
             this._unitOfWork = unitOfWork;
+            this._holidayRequestJournalEntryRepository = holidayRequestJournalEntryRepository;
         }
 
         public HolidayRequest CreateHolidayRequest(HolidayRequest holidayRequest)
@@ -36,6 +40,10 @@ namespace RockHolidays.Service
               , HolidayRequest = holidayRequest
               , OperationDescription = "Utworzenie wniosku o urlop"
             };
+
+            this._holidayRequestJournalEntryRepository.Add(holidayRequestJournalEntry);
+            this.SaveHolidayRequest();
+
             return holidayRequest;
         }
 
