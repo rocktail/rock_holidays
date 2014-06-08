@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using RockHolidays.Data.Infrastructure;
 using RockHolidays.Data.Repository.Interfaces;
 using RockHolidays.Model.Models;
+using RockHolidays.Service.Interfaces;
 
 namespace RockHolidays.Service
 {

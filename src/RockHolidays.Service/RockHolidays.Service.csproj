@@ -40,12 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HolidayRequestService.cs" />
-    <Compile Include="IHolidayRequestService.cs" />
+    <Compile Include="Interfaces\IHolidayRequestService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\RockHolidays.Data\RockHolidays.Data.csproj">
       <Project>{a5272250-954f-4e8e-9697-10f539c910fa}</Project>
