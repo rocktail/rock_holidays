@@ -9,5 +9,9 @@ namespace RockHolidays.Data
 {
     public class RockHolidaysEntities : DbContext
     {
+        public virtual void Commit()
+        {
+            base.SaveChanges();
+        }
     }
 }
