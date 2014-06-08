@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using RockHolidays.Data.Repository.Interfaces;
 using RockHolidays.Model.Models;
 
 namespace RockHolidays.Service
@@ -12,9 +10,19 @@ namespace RockHolidays.Service
     /// </summary>
     public class HolidayRequestService : RockHolidays.Service.IHolidayRequestService
     {
-        public IEnumerable<HolidayRequest> CreateHolidayRequest(HolidayRequest holidayRequest)
+        private IHolidayRequestRepository _holidayRequestRepository;
+
+        public HolidayRequestService(IHolidayRequestRepository holidayRequestRepository)
         {
-            throw new NotImplementedException();
+            this._holidayRequestRepository = holidayRequestRepository;
+        }
+
+        public HolidayRequest CreateHolidayRequest(HolidayRequest holidayRequest)
+        {
+            this._holidayRequestRepository.Add(holidayRequest);
+
+            //TODO: add saving
+            return holidayRequest;
         }
     }
 }

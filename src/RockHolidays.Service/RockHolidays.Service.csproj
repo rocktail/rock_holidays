@@ -47,6 +47,10 @@
     <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RockHolidays.Data\RockHolidays.Data.csproj">
+      <Project>{a5272250-954f-4e8e-9697-10f539c910fa}</Project>
+      <Name>RockHolidays.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RockHolidays.Model\RockHolidays.Model.csproj">
       <Project>{465c8423-b302-4c4d-b295-c05b5aa2318b}</Project>
       <Name>RockHolidays.Model</Name>
