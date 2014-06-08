@@ -19,12 +19,12 @@ namespace RockHolidays.Model.Models
         /// <summary>
         /// Gets or sets holiday request this entry is about
         /// </summary>
-        public int HolidayRequest { get; set; }
+        public HolidayRequest HolidayRequest { get; set; }
 
         /// <summary>
         /// Gets or sets identity of holiday request this entry is about
         /// </summary>
-        public int HolidayRequesIdt { get; set; }
+        public int HolidayRequestId { get; set; }
 
         /// <summary>
         /// Employee who created transaction

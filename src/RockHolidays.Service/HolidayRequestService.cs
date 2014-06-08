@@ -27,7 +27,15 @@ namespace RockHolidays.Service
             this.SaveHolidayRequest();
 
             //we also need to save new holiday request transaction when creating one
-            //TODO: save holiday request transaction
+            var holidayRequestJournalEntry = new HolidayRequestJournalEntry()
+            {
+                CreatedDate = DateTime.Now
+              , Employee = holidayRequest.Employee
+              , EmployeeId = holidayRequest.EmployeeId
+              , HolidayRequestId = holidayRequest.HolidayRequestId
+              , HolidayRequest = holidayRequest
+              , OperationDescription = "Utworzenie wniosku o urlop"
+            };
             return holidayRequest;
         }
 
