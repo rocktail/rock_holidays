@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using RockHolidays.Data.Infrastructure;
 using RockHolidays.Data.Repository.Interfaces;
 using RockHolidays.Model.Models;
 
@@ -11,10 +12,12 @@ namespace RockHolidays.Service
     public class HolidayRequestService : IHolidayRequestService
     {
         private IHolidayRequestRepository _holidayRequestRepository;
+        private IUnitOfWork _unitOfWork;
 
-        public HolidayRequestService(IHolidayRequestRepository holidayRequestRepository)
+        public HolidayRequestService(IHolidayRequestRepository holidayRequestRepository, IUnitOfWork unitOfWork)
         {
             this._holidayRequestRepository = holidayRequestRepository;
+            this._unitOfWork = unitOfWork;
         }
 
         public HolidayRequest CreateHolidayRequest(HolidayRequest holidayRequest)
@@ -29,7 +32,7 @@ namespace RockHolidays.Service
 
         public void SaveHolidayRequest()
         {
-            //TODO: commit unit of work
+            this._unitOfWork.Commit();
         }
     }
 }
