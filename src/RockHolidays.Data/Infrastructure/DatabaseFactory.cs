@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RockHolidays.Data.Infrastructure
 {
-    public class DatabaseFactory: IDatabaseFactory
+    public class DatabaseFactory: Disposable, IDatabaseFactory
     {
         private RockHolidaysEntities _dataContext;
 
@@ -15,9 +15,10 @@ namespace RockHolidays.Data.Infrastructure
             return this._dataContext ?? (this._dataContext = new RockHolidaysEntities());
         }
 
-        public void Dispose()
+        protected override void DisposeCore()
         {
-            throw new NotImplementedException();
+            if (this._dataContext != null)
+                this._dataContext.Dispose();
         }
     }
 }
