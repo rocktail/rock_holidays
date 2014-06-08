@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 namespace RockHolidays.Data.Infrastructure
 {
-    /// <summary>
-    /// Contract for database factory
-    /// </summary>
     public interface IDatabaseFactory : IDisposable
     {
         /// <summary>

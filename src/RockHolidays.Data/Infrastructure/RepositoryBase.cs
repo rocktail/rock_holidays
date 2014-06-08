@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace RockHolidays.Data.Infrastructure
 {
     /// <summary>
-    /// Base class for all repositories
+    /// Base class with implementations for standard operations for all repositories
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public abstract class RepositoryBase<T> where T : class
