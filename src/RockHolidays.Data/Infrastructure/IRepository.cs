@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace RockHolidays.Data.Infrastructure
 {
     /// <summary>
-    /// Base class for repositories
+    /// Base interface for repository implementation
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public interface IRepository<T> where T : class
